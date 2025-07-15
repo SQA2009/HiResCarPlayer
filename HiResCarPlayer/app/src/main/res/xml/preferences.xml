@@ -1,0 +1,26 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreferenceCompat
+        android:key="crossfade_enabled"
+        android:title="Enable Crossfade"
+        android:defaultValue="true" />
+    <SeekBarPreference
+        android:key="crossfade_duration"
+        android:title="Crossfade Duration (seconds)"
+        android:min="1"
+        android:max="10"
+        android:defaultValue="5"
+        android:enabled="false"
+        android:dependency="crossfade_enabled" />
+    <SwitchPreferenceCompat
+        android:key="silence_skip_enabled"
+        android:title="Skip Silences"
+        android:defaultValue="true" />
+    <SeekBarPreference
+        android:key="silence_skip_threshold"
+        android:title="Silence Threshold (dB)"
+        android:min="-80"
+        android:max="-20"
+        android:defaultValue="-40"
+        android:enabled="false"
+        android:dependency="silence_skip_enabled" />
+</PreferenceScreen>
